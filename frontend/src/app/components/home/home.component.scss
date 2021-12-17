@@ -1,0 +1,25 @@
+.store {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+
+  .element {
+    min-width: 350px;
+    background-color: black;
+    margin: 5px 5px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .element .iframe {
+    border-radius: 10px;
+  }
+
+  .vp-title a {
+    color: white !important;
+  }
+}

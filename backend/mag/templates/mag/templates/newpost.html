@@ -1,0 +1,23 @@
+ <!--================Tracking Box Area =================-->
+ <section class="tracking_box_area section_gap">
+    
+    <div class="container">
+        <div class="tracking_box_inner">
+            <p>Olá  </p>
+            <p>Nesta secção poderá anunciar um Leilão. Pode ver os nossos Termos & Condições neste <a href="">LINK</a> </p>
+            
+            <form class="row tracking_form" action="{% url 'newPost' %}" method="post" enctype="multipart/form-data" novalidate="novalidate">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                
+                <div class="col-md-12 form-group">
+                    <button type="submit" value="submit" class="primary-btn">PUBLICAR</button>
+                </div>
+            </form>
+            {% if message %}
+                <div class="alert alert-{{msg_type}}">{{ message }}</div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!--================End Tracking Box Area =================-->
